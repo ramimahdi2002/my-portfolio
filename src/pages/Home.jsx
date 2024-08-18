@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/Home.css';
 
 const Home = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) { // Adjust the scroll position where the button should appear
+      setShowBackToTop(true);
+    } else {
+      setShowBackToTop(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const sliderSettings = {
     dots: true,
     infinite: true,
@@ -19,73 +34,69 @@ const Home = () => {
   };
 
   return (
-  <div className='background'>
-    <div className="home-container">
-      {/* Header Section */}
-      <div className="header-section">
-        <div className="header-text">
-          <h2 className="header-title">Front-End</h2>
-          <h2 className="header-title developer-title">Developer</h2>
+    <div className='background'>
+      <div className="home-container">
+        <div className="header-section">
+          <div className="header-text">
+            <h2 className="header-title">Front-End</h2>
+            <h2 className="header-title developer-title">Developer</h2>
+          </div>
+          <div className="header-overlay" />
         </div>
-        <div className="header-overlay" />
-      </div>
 
-      {/* About Me Section */}
-      <div className="about-section">
-        <div className="about-text">
+        <div className="about-section">
+          <div className="about-text">
+            <h2 className="section-title">
+              <span className="section-number">01 -</span> About Me
+            </h2>
+            <img
+              src="./assets/images/myimage.jpg"
+              alt="Rami Mahdi"
+              className="about-image"
+            />
+          </div>
+          <div className="about-description">
+            <p>
+              Hello! I'm Rami Mahdi, a passionate front-end developer based in Ain Anoub with a knack for crafting beautiful and user-friendly digital experiences. Since 2020, I've been immersed in the world of web development.
+            </p>
+          </div>
+        </div>
+
+        <div className="portfolio-section">
           <h2 className="section-title">
-          <span className="section-number">01 -</span> About Me
+            <span className="section-number">02 -</span> Portfolio
           </h2>
-          <img
-          src="./assets/images/myimage.jpg"
-          alt="Rami Mahdi"
-          className="about-image"
-          />
-        </div>
-        <div className="about-description">
-          <p>
-          Hello! I'm Rami Mahdi, a passionate front-end developer based in Ain Anoub with a knack for crafting beautiful and user-friendly digital experiences. Since 2020, I've been immersed in the world of web development.
-          </p>
-        </div>
-      </div>
+          <div className="portfolio-description">
+            <p>
+              Welcome to the portfolio of Rami Mahdi, a dedicated and innovative Front-End Developer with a passion for crafting engaging user experiences. With expertise in modern technologies like HTML, CSS, JavaScript, and React, I have a proven track record of developing responsive and intuitive web applications. I had several internships and took courses from academy like full Stack web development from the yoobee ai academy.
+            </p>
+          </div>
 
-      {/* Portfolio Section */}
-      <div className="portfolio-section">
-        <h2 className="section-title">
-          <span className="section-number">02 -</span> Portfolio
-        </h2>
-        <div className="portfolio-description">
-          <p>
-            Welcome to the portfolio of Rami Mahdi, a dedicated and innovative Front-End Developer with a passion for crafting engaging user experiences. With expertise in modern technologies like HTML, CSS, JavaScript, and React, I have a proven track record of developing responsive and intuitive web applications. I had several internships and took courses from academy like full Stack web development from the yoobee ai academy.
-          </p>
+          <div className="portfolio-slider">
+            <Slider {...sliderSettings}>
+              <div>
+                <img src="./assets/images/project1.png" alt="Project 1" className="slider-image" />
+              </div>
+              <div>
+                <img src="./assets/images/project2.png" alt="Project 2" className="slider-image" />
+              </div>
+              <div>
+                <img src="./assets/images/project3.png" alt="Project 3" className="slider-image" />
+              </div>
+            </Slider>
+          </div>
         </div>
 
-        <div className="portfolio-slider">
-          <Slider {...sliderSettings}>
-            <div>
-              <img src="./assets/images/project1.png" alt="Project 1" className="slider-image" />
-            </div>
-            <div>
-              <img src="./assets/images/project2.png" alt="Project 2" className="slider-image" />
-            </div>
-            <div>
-              <img src="./assets/images/project3.png" alt="Project 3" className="slider-image" />
-            </div>
-          </Slider>
-        </div>
-      </div>
-
-
-
-      {/* Back to Top Icon */}
-      <div
-        className="back-to-top"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        <span>↑</span>
+        {showBackToTop && (
+          <div
+            className="back-to-top"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <i className="fas fa-arrow-up"></i>
+          </div>
+        )}
       </div>
     </div>
-  </div>
   );
 };
 

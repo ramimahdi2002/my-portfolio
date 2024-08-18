@@ -1,7 +1,21 @@
-import React from 'react';
-import '../styles/Aboutme.css'; // Adjust the path as necessary
+import React, { useState, useEffect } from 'react';
+import '../styles/Aboutme.css';
 
 const Aboutme = () => {
+  const [showBackToTop, setShowBackToTop] = useState(false);
+
+  const handleScroll = () => {
+    if (window.scrollY > 300) { // Adjust the scroll position where the button should appear
+      setShowBackToTop(true);
+    } else {
+      setShowBackToTop(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <div className="aboutme-container">
       <div className="background-image"></div>
@@ -30,6 +44,14 @@ const Aboutme = () => {
           Navigate to the Check My Portfolio section to explore my projects, each a chapter in my 
           ongoing story of growth and creativity in front-end development.
         </p>
+        {showBackToTop && (
+          <div
+            className="back-to-top"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <i className="fas fa-arrow-up"></i>
+          </div>
+        )}
       </div>
     </div>
   );

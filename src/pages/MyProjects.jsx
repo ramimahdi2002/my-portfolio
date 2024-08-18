@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import '../styles/MyProjects.css';
 
@@ -15,11 +15,24 @@ const Portfolio = () => {
     fade: true,  
     cssEase: 'ease-in-out',  
   };
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
+  const handleScroll = () => {
+    if (window.scrollY > 300) { // Adjust the scroll position where the button should appear
+      setShowBackToTop(true);
+    } else {
+      setShowBackToTop(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <div className="portfolio-container">
-      <div className="portfolio-background"></div>
-      <div className="portfolio-overlay"></div>
+      <div className="background-image"></div>
+      <div className="background-overlay"></div>
       <div className="about">
         <h2>My Projects</h2>
       </div>
@@ -100,6 +113,14 @@ const Portfolio = () => {
           </div>
         </Slider>
       </div>
+      {showBackToTop && (
+          <div
+            className="back-to-top"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <i className="fas fa-arrow-up"></i>
+          </div>
+        )}
 </div>
     </div>
   );
