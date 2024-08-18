@@ -1,8 +1,56 @@
-/* src/styles/Footer.css */
 .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-  }
-  
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #616ac4;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #d3d3d3;
+}
+
+.footer-section ul li i {
+  margin-right: 10px;
+  color: #616ac4;
+}
+
+.footer-section.quick-links .download-cv-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #616ac4;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.footer-section.quick-links .download-cv-button:hover {
+  background-color: #4b50c4;
+}
