@@ -82,14 +82,14 @@ html, body {
 }
 
 .about-image {
-  width: 70%; 
+  width: 50%;
+  height:600px; 
   margin: 20px auto; 
-  height: auto;
   border-radius: 15px;
 }
 
 .about-description p {
-  font-size: 16px; 
+  font-size: 19px; 
   line-height: 1.5;
   color: #d3d3d3;
 }
@@ -151,6 +151,10 @@ html, body {
 
 @media (max-width: 768px) {
   .header-section{
-    height: 550px;
+    height: 600px;
+  }
+  .about-image{
+    width: 80%;
+    height: 250px;
   }
 }
