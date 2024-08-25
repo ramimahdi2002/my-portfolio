@@ -44,31 +44,31 @@ const Portfolio = () => {
       <div className="project-slider">
         <Slider {...sliderSettings}>
           <div>
-            <img src="./assets/images/youbee1.gif" alt="Project 1" className="slider-image" />
+            <img src="./assets/images/youbee1.png" alt="Project 1" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/youbee2.gif" alt="Project 2" className="slider-image" />
+            <img src="./assets/images/youbee2.png" alt="Project 2" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/youbee3.gif" alt="Project 3" className="slider-image" />
+            <img src="./assets/images/youbee3.png" alt="Project 3" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/youbee4.gif" alt="Project 4" className="slider-image" />
+            <img src="./assets/images/youbee4.png" alt="Project 4" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/youbee5.gif" alt="Project 5" className="slider-image" />
+            <img src="./assets/images/youbee5.png" alt="Project 5" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/youbee6.gif" alt="Project 6" className="slider-image" />
+            <img src="./assets/images/youbee6.png" alt="Project 6" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/youbee7.gif" alt="Project 7" className="slider-image" />
+            <img src="./assets/images/youbee7.png" alt="Project 7" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/youbee8.gif" alt="Project 8" className="slider-image" />
+            <img src="./assets/images/youbee8.png" alt="Project 8" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/youbee9.gif" alt="Project 9" className="slider-image" />
+            <img src="./assets/images/youbee9.png" alt="Project 9" className="slider-image" />
           </div>
         </Slider>
       </div>
@@ -81,22 +81,22 @@ const Portfolio = () => {
       <div className="project-slider">
         <Slider {...sliderSettings}>
           <div>
-            <img src="./assets/images/admin.gif" alt="Project 1" className="slider-image" />
+            <img src="./assets/images/admin.png" alt="Project 1" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/admin1.gif" alt="Project 2" className="slider-image" />
+            <img src="./assets/images/admin1.png" alt="Project 2" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/admin2.gif" alt="Project 3" className="slider-image" />
+            <img src="./assets/images/admin2.png" alt="Project 3" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/admin3.gif" alt="Project 4" className="slider-image" />
+            <img src="./assets/images/admin3.png" alt="Project 4" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/admin4.gif" alt="Project 5" className="slider-image" />
+            <img src="./assets/images/admin4.png" alt="Project 5" className="slider-image" />
           </div>
           <div>
-            <img src="./assets/images/admin5.gif" alt="Project 6" className="slider-image" />
+            <img src="./assets/images/admin5.png" alt="Project 6" className="slider-image" />
           </div>
         </Slider>
       </div>
@@ -109,7 +109,7 @@ const Portfolio = () => {
       <div className="project-slider">
         <Slider {...sliderSettings}>
           <div>
-            <img src="./assets/images/instagram.gif" alt="Project 1" className="slider-image" />
+            <img src="./assets/images/instagram.png" alt="Project 1" className="slider-image" />
           </div>
         </Slider>
       </div>
