@@ -1,3 +1,4 @@
+/* Container Styles */
 .aboutme-container {
     position: relative;
     min-height: 100vh;
@@ -7,27 +8,91 @@
     padding-bottom: 50px;
 }
 
+/* Background Styles */
+.background-image {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../../public/assets/images/image.png') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
 
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: -1;
+}
 
-
+/* About Section Styles */
 .about {
     position: relative;
-    margin-top: 250px;
+    margin-top: 150px; /* Adjusted margin to be under the nav */
     font-size: 36px;
     text-align: center;
     z-index: 3;
 }
 
-.about img {
+/* Profile Image Styles */
+.profile-image {
     width: 40%;
     margin-top: 20px;
-    height: 550px;
+    height: auto; /* Ensures the image is not stretched */
+    max-height: 400px; /* Adjusts the max height to prevent stretching */
     border-radius: 15px;
 }
 
-.about p {
+/* About Description Styles */
+.about-description {
     font-size: 24px;
-    margin: auto;
+    margin: 20px auto 0 auto;
     width: 80%;
     line-height: 1.6;
+}
+
+/* Back-to-Top Button Styles */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #616ac4;
+    border-radius: 50%;
+    padding: 15px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.back-to-top i {
+    font-size: 20px;
+    color: white;
+}
+@media (max-width: 768px) {
+    .about {
+        margin-top: 250px; /* Further increased margin-top for very small screens */
+    }
+
+    .profile-image {
+        width: 80%; /* Further adjust width for very small screens */
+        max-height: 250px; /* Further adjust max-height for very small screens */
+    }
+
+    .about-description {
+        font-size: 18px; /* Smaller text for very small screens */
+        width: 95%; /* Adjust width for very small screens */
+    }
 }

@@ -6,8 +6,9 @@ function Contactme() {
   const email = 'ramimehdi2@hotmail.com'; // Your email address
   const [showBackToTop, setShowBackToTop] = useState(false);
 
+  // Handle scroll to show/hide back-to-top button
   const handleScroll = () => {
-    if (window.scrollY > 300) { // Adjust the scroll position where the button should appear
+    if (window.scrollY > 300) {
       setShowBackToTop(true);
     } else {
       setShowBackToTop(false);
@@ -18,10 +19,13 @@ function Contactme() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle SMS button click
   const handleSMSClick = () => {
     window.location.href = `sms:${phoneNumber}`;
   };
 
+  // Handle email button click
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}`;
   };
@@ -31,7 +35,7 @@ function Contactme() {
       <div className="background-image"></div>
       <div className="background-overlay"></div>
       <div className="container">
-        <h1 className="title">Contact Me</h1>
+        <h1 className="contact-title">Contact Me</h1>
         <h2 className="subtitle">Let's connect constellations</h2>
         <p className="subtitle2">
           Let's align our constellations! Reach out and let the magic of collaboration illuminate our skies.

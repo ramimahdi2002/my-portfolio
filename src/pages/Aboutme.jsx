@@ -4,8 +4,9 @@ import '../styles/Aboutme.css';
 const Aboutme = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
+  // Handle scroll to show/hide back-to-top button
   const handleScroll = () => {
-    if (window.scrollY > 300) { // Adjust the scroll position where the button should appear
+    if (window.scrollY > 300) {
       setShowBackToTop(true);
     } else {
       setShowBackToTop(false);
@@ -16,6 +17,7 @@ const Aboutme = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   return (
     <div className="aboutme-container">
       <div className="background-image"></div>
@@ -25,8 +27,9 @@ const Aboutme = () => {
         <img
           src="./assets/images/myimage.jpg"
           alt="Rami Mahdi"
+          className="profile-image"
         />
-        <p>
+        <p className="about-description">
           Hello! I’m Rami Mahdi, a passionate front-end developer hailing from the picturesque town 
           of Ain Anoub. My journey in the digital realm began in 2020, and since then, my dedication 
           to creating beautiful, intuitive, and user-friendly digital experiences has only deepened. 

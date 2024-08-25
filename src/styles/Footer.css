@@ -1,19 +1,27 @@
 .footer {
   background-color: #1a1a1a;
   color: #fff;
-  padding: 20px 0;
+  padding: 20px 10px; /* Adjusted for smaller screens */
   z-index: 10;
 }
 
 .footer-content {
   display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
   justify-content: space-between;
-  padding: 0 50px;
+  padding: 0 20px; /* Reduced padding for smaller screens */
 }
 
 .footer-section {
-  flex: 1;
-  margin: 0 20px;
+  flex: 1 1 100%; /* Ensure each section takes full width on smaller screens */
+  margin: 10px 0; /* Margin adjustment for better spacing */
+}
+
+@media (min-width: 768px) {
+  .footer-section {
+    flex: 1; /* Restore original flex behavior for larger screens */
+    margin: 0 20px;
+  }
 }
 
 .footer-section h4 {
@@ -37,6 +45,7 @@
   margin-right: 10px;
   color: #616ac4;
 }
+
 .footer-section ul a {
   margin-bottom: 10px;
   font-size: 16px;
@@ -49,7 +58,6 @@
   margin-right: 10px;
   color: #616ac4;
 }
-
 
 .footer-section.quick-links .download-cv-button {
   display: inline-block;
@@ -67,8 +75,13 @@
 .footer-section.quick-links .download-cv-button:hover {
   background-color: #4b50c4;
 }
-.social-links a{
-  margin: 20px ;
-  margin-top: 20px;
 
+.social-links {
+  display: flex;
+  justify-content: center; /* Center the social links */
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px; /* Adjusted margin for better spacing on smaller screens */
 }
