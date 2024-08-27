@@ -2,7 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import '../styles/MyProjects.css';
 import BackToTop from '../components/BackToTop';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 const Portfolio = () => {
   const sliderSettings = {
     dots: true,

@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Aboutme.css';
 import BackToTop from '../components/BackToTop';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 const Aboutme = () => {
 
   return (

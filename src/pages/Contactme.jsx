@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/Contactme.css';
 import BackToTop from '../components/BackToTop'; 
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
+import { Analytics } from "@vercel/analytics/react"
 function Contactme() {
   const phoneNumber = '+96171107196'; 
   const email = 'ramimehdi2@hotmail.com';
