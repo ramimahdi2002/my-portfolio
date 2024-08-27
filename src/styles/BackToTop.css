@@ -1,9 +1,8 @@
-
+/* src/components/BackToTop.css */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #4b50c4; 
     border-radius: 50%;
     padding: 10px;
     width: 50px;
@@ -22,5 +21,5 @@
 }
 
 .back-to-top:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px); /* Adds a subtle lift effect on hover */
 }

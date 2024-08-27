@@ -20,12 +20,14 @@ const BackToTop = () => {
 
   return (
     showBackToTop && (
-      <div
-        className="back-to-top"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        <i className="fas fa-arrow-up"></i>
-      </div>
+  <div
+  className="back-to-top"
+  style={{ backgroundColor: '#4b50c4' }}
+  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+>
+  <i className="fas fa-arrow-up"></i>
+</div>
+
     )
   );
 };
