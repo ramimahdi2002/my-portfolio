@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import '../styles/Contactme.css';
 
 function Contactme() {
-  const phoneNumber = '+96171107196'; // Your phone number
-  const email = 'ramimehdi2@hotmail.com'; // Your email address
+  const phoneNumber = '+96171107196'; 
+  const email = 'ramimehdi2@hotmail.com';
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  // Handle scroll to show/hide back-to-top button
   const handleScroll = () => {
     if (window.scrollY > 300) {
       setShowBackToTop(true);
@@ -20,12 +19,10 @@ function Contactme() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle SMS button click
   const handleSMSClick = () => {
     window.location.href = `sms:${phoneNumber}`;
   };
 
-  // Handle email button click
   const handleEmailClick = () => {
     window.location.href = `mailto:${email}`;
   };

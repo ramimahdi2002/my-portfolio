@@ -8,7 +8,7 @@ const Home = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   const handleScroll = () => {
-    if (window.scrollY > 300) { // Adjust the scroll position where the button should appear
+    if (window.scrollY > 300) {
       setShowBackToTop(true);
     } else {
       setShowBackToTop(false);
@@ -64,7 +64,7 @@ const Home = () => {
 
         <div className="portfolio-section">
           <h2 className="section-title">
-            <span className="section-number">02 -</span> Portfolio
+            <span className="section-number">02 -</span> Projects
           </h2>
           <div className="portfolio-description">
             <p>

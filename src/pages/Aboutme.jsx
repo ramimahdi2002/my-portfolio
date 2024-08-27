@@ -4,7 +4,6 @@ import '../styles/Aboutme.css';
 const Aboutme = () => {
   const [showBackToTop, setShowBackToTop] = useState(false);
 
-  // Handle scroll to show/hide back-to-top button
   const handleScroll = () => {
     if (window.scrollY > 300) {
       setShowBackToTop(true);
@@ -32,21 +31,54 @@ const Aboutme = () => {
         <p className="about-description">
           Hello! I’m Rami Mahdi, a passionate front-end developer hailing from the picturesque town 
           of Ain Anoub. My journey in the digital realm began in 2020, and since then, my dedication 
-          to creating beautiful, intuitive, and user-friendly digital experiences has only deepened. 
-          My expertise lies in weaving together the latest front-end technologies such as HTML5, CSS3,
-          and JavaScript frameworks like React and Vue.js, to bring responsive and dynamic web
-          applications to life. I take pride in my meticulous attention to detail and my commitment to 
-          elevating user experience to the realm of art. It's not just about writing code; it's about 
-          building a digital story that engages and inspires. Each project is a new adventure, an 
-          opportunity to challenge the boundaries of what's possible on the web.
-          Whether it's a small business website, an intricate e-commerce platform, or a vibrant 
-          interactive web application, my goal is to deliver digital experiences that resonate with users
-          and stand out in the digital landscape. My work is a testament to my craft, 
-          a blend of aesthetic appeal and technical robustness. I invite you to peruse my body of work 
-          and see for yourself the passion and craftsmanship I bring to each project. 
-          Navigate to the Check My Portfolio section to explore my projects, each a chapter in my 
-          ongoing story of growth and creativity in front-end development.
+          to creating beautiful, intuitive, and user-friendly digital experiences has only deepened...
         </p>
+        <div className="objective">
+          <h3>Objective</h3>
+          <p>
+            I am looking for a software or web development position where I can start my career in developing and building websites and mobile applications.
+          </p>
+        </div>
+        <div className="education">
+          <h3>Education</h3>
+          <p><strong>Antonine University</strong> - Bachelor of Technology in Computer Science, DEC 2024</p>
+          <p><strong>Kfarshima High School</strong> - Lebanese Baccalaureate - Life Science, JUN 2019</p>
+          <p><strong>You bee AI</strong> - Full Stack Web Development Bootcamp, JUN 2024</p>
+        </div>
+        <div className="experience">
+          <h3>Experience</h3>
+          <p><strong>OGERO, Lebanon - Intern</strong> (JAN 2024 - APR 2024)</p>
+          <p>Installed networking and fiber internet technologies.</p>
+          <p>Configured networking equipment and fiber internet connections.</p>
+          <p><strong>OGERO, Lebanon - Front-end development</strong> (JUN 2024 - AUG 2024)</p>
+          <p>Developed admin consoles using React JS primarily focusing on university management system.</p>
+          <p>Created a comprehensive dashboard page for managing students, professors, and courses each requiring a complex logic and intricate functionalities.</p>
+          <p>Gained extensive experience in handling data interactions and state management within React, designing systems, enhancing my ability to create cohesive and visually appealing user interfaces, building scalable and maintainable web applications.</p>
+        </div>
+        <div className="skills">
+          <h3>Technical Skills</h3>
+          <ul>
+            {['React JS', 'Laravel', 'PHP', 'C#', 'HTML, CSS, JS', 'React-Native', 'Java FX', 'Java', 'C++'].map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="skills">
+          <h3>Soft Skills</h3>
+          <ul>
+            {['Time Management', 'Problem-Solving', 'Communication'].map((skill, index) => (
+              <li key={index}>{skill}</li>
+            ))}
+          </ul>
+        </div>
+        <div className="skills">
+          <h3>Languages</h3>
+          <ul>
+            {['English (Fluent)', 'Arabic (Native)'].map((language, index) => (
+              <li key={index}>{language}</li>
+            ))}
+          </ul>
+        </div>
         {showBackToTop && (
           <div
             className="back-to-top"

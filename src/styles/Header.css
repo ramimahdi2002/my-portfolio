@@ -1,10 +1,10 @@
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0; /* Reduced padding for mobile */
+  align-items: center; 
+  padding: 50px 10px;
   background-color: transparent;
   color: white;
-  margin-left: 10px; /* Adjusted margin for mobile */
   position: absolute;
   top: 0;
   width: 96%;
@@ -12,40 +12,96 @@
 }
 
 .header-title {
-  font-size: 35px; /* Reduced font size for mobile */
-  margin-left: 10px; /* Adjusted margin for mobile */
+  font-size: 30px;
+  margin: 10px;
+  display: flex;
+
+  align-items: center; 
+}
+
+.header-title-bold {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .header-nav a {
   color: white;
-  margin: 0 15px; /* Reduced margin for mobile */
+  margin: 0 15px;
   text-decoration: none;
-  font-size: 18px; /* Reduced font size for mobile */
+  font-size: 18px;
 }
 
-/* Responsive adjustments */
+.header-nav a.active {
+  color: #616ac4;
+  font-weight: bold;
+}
+
+.burger-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.bar.open {
+  background-color: #616ac4;
+}
+
+
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 0; /* Further reduced padding for smaller screens */
+    justify-content: space-between;
+    padding: 30px 10px;
   }
 
   .header-title {
+    font-size: 24px;
     margin-left: 0;
-    text-align: center;
-    font-size: 28px; /* Further reduced font size */
+  }
+
+  .header-title-bold,
+  .header-title-normal {
+    font-size: 24px;
+  }
+
+  .burger-icon {
+    display: flex;
+    align-items: center;
   }
 
   .header-nav {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
+    width: 100%;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+  }
+
+  .header-nav.open {
+    display: flex;
   }
 
   .header-nav a {
-    margin: 5px 0; /* Stacked links for mobile */
-    font-size: 16px; /* Smaller font for mobile */
+    margin: 10px 0;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
   }
 }
