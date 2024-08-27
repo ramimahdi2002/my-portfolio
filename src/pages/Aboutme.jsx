@@ -1,21 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/Aboutme.css';
+import BackToTop from '../components/BackToTop';
 
 const Aboutme = () => {
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setShowBackToTop(true);
-    } else {
-      setShowBackToTop(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div className="aboutme-container">
@@ -79,14 +66,7 @@ const Aboutme = () => {
             ))}
           </ul>
         </div>
-        {showBackToTop && (
-          <div
-            className="back-to-top"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <i className="fas fa-arrow-up"></i>
-          </div>
-        )}
+<BackToTop/>
       </div>
     </div>
   );

@@ -1,24 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import '../styles/Home.css';
+import BackToTop from '../components/BackToTop'; 
 
 const Home = () => {
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setShowBackToTop(true);
-    } else {
-      setShowBackToTop(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const sliderSettings = {
     dots: true,
@@ -87,14 +74,7 @@ const Home = () => {
           </div>
         </div>
 
-        {showBackToTop && (
-          <div
-            className="back-to-top"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <i className="fas fa-arrow-up"></i>
-          </div>
-        )}
+<BackToTop/>
       </div>
     </div>
   );

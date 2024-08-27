@@ -1,23 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/Contactme.css';
+import BackToTop from '../components/BackToTop'; 
 
 function Contactme() {
   const phoneNumber = '+96171107196'; 
   const email = 'ramimehdi2@hotmail.com';
-  const [showBackToTop, setShowBackToTop] = useState(false);
 
-  const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setShowBackToTop(true);
-    } else {
-      setShowBackToTop(false);
-    }
-  };
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   const handleSMSClick = () => {
     window.location.href = `sms:${phoneNumber}`;
@@ -45,14 +34,7 @@ function Contactme() {
             <button onClick={handleEmailClick}>Send Me an Email</button>
           </div>
         </div>
-        {showBackToTop && (
-          <div
-            className="back-to-top"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <i className="fas fa-arrow-up"></i>
-          </div>
-        )}
+        <BackToTop /> 
       </div>
     </div>
   );

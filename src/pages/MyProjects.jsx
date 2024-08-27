@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Slider from 'react-slick';
 import '../styles/MyProjects.css';
+import BackToTop from '../components/BackToTop';
 
 const Portfolio = () => {
   const sliderSettings = {
@@ -16,26 +17,12 @@ const Portfolio = () => {
     cssEase: 'ease-in-out',
   };
 
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setShowBackToTop(true);
-    } else {
-      setShowBackToTop(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div className="portfolio-container">
       <div className="background-image"></div>
       <div className="background-overlay"></div>
-      <div className="title">
+      <div className="about">
         <h2>My Projects</h2>
       </div>
       <div>
@@ -112,14 +99,7 @@ const Portfolio = () => {
             </div>
           </Slider>
         </div>
-        {showBackToTop && (
-          <div
-            className="back-to-top"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            <i className="fas fa-arrow-up"></i>
-          </div>
-        )}
+<BackToTop/>
       </div>
     </div>
   );
