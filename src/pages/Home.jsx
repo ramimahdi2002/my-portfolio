@@ -46,8 +46,6 @@ const Home = () => {
           <div className="about-description">
             <p>
               Hello! I'm Rami Mahdi, a passionate front-end developer based in Ain Anoub with a knack for crafting beautiful and user-friendly digital experiences. Since 2020, I've been immersed in the world of web development.
-            </p> <p>
-              Hello! I'm Rami Mahdi, a passionate front-end developer based in Ain Anoub with a knack for crafting beautiful and user-friendly digital experiences. Since 2020, I've been immersed in the world of web development.
             </p>
           </div>
         </div>
